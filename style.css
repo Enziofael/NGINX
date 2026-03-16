@@ -1,0 +1,450 @@
+/* css/style.css */
+:root {
+    /* Основные цвета темной темы */
+    --bg-primary: #0a0c0f;
+    --bg-secondary: #14181c;
+    --bg-tertiary: #1e2429;
+    --text-primary: #eef4f8;
+    --text-secondary: #a0b3c6;
+    --border-color: #2a333c;
+    
+    /* Акцентная палитра */
+    --accent-cyan: #0ff;
+    --accent-blue: #4facfe;
+    --accent-green: #00ff9d;
+    
+    /* Дополнительные */
+    --glow-cyan: 0 0 15px rgba(0, 255, 255, 0.3);
+    --glow-blue: 0 0 15px rgba(79, 172, 254, 0.3);
+    --glow-green: 0 0 15px rgba(0, 255, 157, 0.3);
+    --transition: all 0.25s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Контейнер для навигации */
+.nav-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 16px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-container:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.nav-link h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-cyan);
+    background: rgba(0, 255, 255, 0.05);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: linear-gradient(145deg, rgba(0, 255, 255, 0.15), rgba(79, 172, 254, 0.15));
+    color: white;
+    border-color: var(--accent-blue);
+    box-shadow: var(--glow-blue);
+}
+
+.nav-link.active h1 {
+    color: white;
+}
+
+/* КРАСИВЫЙ КОНТЕЙНЕР ДЛЯ ВАШЕГО КОНТЕНТА */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 20px 40px -20px rgba(0, 255, 255, 0.2);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Декоративный элемент */
+.content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-green));
+    border-radius: 30px 30px 0 0;
+}
+
+.content-wrapper:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 30px 50px -20px var(--accent-cyan);
+}
+
+/* Базовые стили для любого контента внутри */
+.content-wrapper > * {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .content-wrapper {
+        padding: 20px;
+    }
+}
+
+
+/* Стили для формы и fieldset */
+.content-wrapper form {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease;
+}
+
+.content-wrapper fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: var(--bg-tertiary);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Стили для fieldset-card как у fieldset */
+.fieldset-card {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: var(--bg-tertiary);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Декоративная полоска сверху */
+.fieldset-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-green));
+    opacity: 0.7;
+}
+
+/* Эффект при наведении */
+.fieldset-card:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-2px);
+}
+
+/* Стили для изображений */
+.fieldset-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.fieldset-card:hover img {
+    border-color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+}
+
+/* Стили для заголовков */
+.fieldset-card h1 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 5px 0;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent-cyan);
+}
+
+/* Стили для параграфов */
+.fieldset-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Чередование цветов для заголовков */
+.fieldset-card:nth-child(odd) h1 {
+    border-left-color: var(--accent-cyan);
+}
+
+.fieldset-card:nth-child(even) h1 {
+    border-left-color: var(--accent-blue);
+}
+
+.fieldset-card:last-child h1 {
+    border-left-color: var(--accent-green);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .fieldset-card {
+        padding: 20px;
+    }
+    
+    .fieldset-card img {
+        height: 180px;
+    }
+    
+    .fieldset-card h1 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fieldset-card img {
+        height: 150px;
+    }
+    
+    .fieldset-card h1 {
+        font-size: 1.2rem;
+    }
+    
+    .fieldset-card p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Декоративная полоска сверху у fieldset */
+.content-wrapper fieldset::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-green));
+    opacity: 0.7;
+}
+
+.content-wrapper fieldset:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-2px);
+}
+
+/* Заголовки вопросов */
+.content-wrapper fieldset p {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--border-color);
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Номер вопроса */
+.content-wrapper fieldset p::before {
+    content: '●';
+    color: var(--accent-cyan);
+    position: absolute;
+    left: -5px;
+    top: 0;
+    font-size: 1.2rem;
+    animation: pulse 2s infinite;
+}
+
+/* Контейнер для вариантов ответов */
+.content-wrapper fieldset > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    padding: 10px 0 5px 15px;
+}
+
+/* Стили для чекбоксов */
+.content-wrapper input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    vertical-align: middle;
+}
+
+.content-wrapper input[type="checkbox"]:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: var(--glow-cyan);
+}
+
+.content-wrapper input[type="checkbox"]:checked {
+    background: var(--accent-green);
+    border-color: var(--accent-green);
+    box-shadow: var(--glow-green);
+}
+
+.content-wrapper input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: var(--bg-primary);
+    font-size: 14px;
+    font-weight: bold;
+    left: 3px;
+    top: -1px;
+}
+
+/* Стили для label */
+.content-wrapper label {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    background: var(--bg-secondary);
+    border: 1px solid transparent;
+}
+
+.content-wrapper label:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    background: rgba(0, 255, 255, 0.05);
+}
+
+/* Активный label когда чекбокс отмечен */
+.content-wrapper input[type="checkbox"]:checked + label {
+    color: var(--accent-green);
+    border-color: var(--accent-green);
+    background: rgba(0, 255, 157, 0.1);
+}
+
+/* Специфичные цвета для разных вопросов (через nth-child) */
+.content-wrapper fieldset:nth-child(odd) p::before {
+    color: var(--accent-cyan);
+}
+
+.content-wrapper fieldset:nth-child(even) p::before {
+    color: var(--accent-blue);
+}
+
+.content-wrapper fieldset:last-child p::before {
+    color: var(--accent-green);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .content-wrapper fieldset {
+        padding: 20px;
+    }
+    
+    .content-wrapper fieldset > div {
+        gap: 15px;
+    }
+    
+    .content-wrapper label {
+        font-size: 1rem;
+        padding: 8px 15px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .content-wrapper input[type="checkbox"] {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .content-wrapper fieldset p {
+        font-size: 1rem;
+    }
+    
+    .content-wrapper label {
+        font-size: 0.95rem;
+    }
+}

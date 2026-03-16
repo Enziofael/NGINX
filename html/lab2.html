@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1 | HTTP Тест</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- СКРИПТ ВСТАВИТ СЮДА НАВИГАЦИЮ -->
+    <script src="js/navigation.js"></script>
+    
+    <!-- ВАШ КОНТЕНТ (ПИШЕТЕ САМИ В DIV) -->
+    <div class="my-content">
+			<form>
+		<fieldset>
+			<p>1. На каком порту работает HTTP сервер?</p>
+			<div>
+				<input id="a11" type="checkbox" name="q1" checked>
+				<label for="a11">80</label>
+				<input id="a12" type="checkbox" name="q1">
+				<label for="a12">443</label>
+				<input id="a13" type="checkbox" name="q1">
+				<label for="a13">5000</label>
+				<input id="a14" type="checkbox" name="q1">
+				<label for="a14">8080</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<p>2. Какой из перечисленных методов HTTP запроса позволяет получить данные?</p>
+			<div>
+				<input id="a21" type="checkbox" name="q2">
+				<label for="a21">POST</label>
+				<input id="a22" type="checkbox" name="q2" checked>
+				<label for="a22">GET</label>
+				<input id="a23" type="checkbox" name="q2">
+				<label for="a23">PUT</label>
+				<input id="a24" type="checkbox" name="q2">
+				<label for="a24">PATCH</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<p>3. Из каких частей состоит HTTP запрос?</p>
+			<div>
+				<input id="a31" type="checkbox" name="q3" checked>
+				<label for="a31">Версия HTTP протокола</label>
+				<input id="a32" type="checkbox" name="q3">
+				<label for="a32">HTTP метод</label>
+				<input id="a33" type="checkbox" name="q3" checked>
+				<label for="a33">Адрес хоста</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<p>4. Какие из перечисленных HTTP статусов возвращается в результате успешного ответа сервера?</p>
+			<div>
+				<input id="a41" type="checkbox" name="q4">
+				<label for="a41">100-199</label>
+				<input id="a42" type="checkbox" name="q4" checked>
+				<label for="a42">200-299</label>
+				<input id="a43" type="checkbox" name="q4">
+				<label for="a43">300-399</label>
+				<input id="a44" type="checkbox" name="q4">
+				<label for="a44">400-499</label>
+				<input id="a45" type="checkbox" name="q4">
+				<label for="a45">500-599</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<p>5. Для чего нужен прокси-сервер?</p>
+			<div>
+				<input id="a51" type="checkbox" name="q5" checked>
+				<label for="a51">Кэширование данных</label>
+				<input id="a52" type="checkbox" name="q5" checked>
+				<label for="a52">Ограничение доступа к некоторым сайтам</label>
+				<input id="a53" type="checkbox" name="q5">
+				<label for="a53">Передача зашифрованных данных</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<p>6. Какая из перечисленных спецификаций(стандартов) на каждый HTTP запрос создает новый процесс?</p>
+			<div>
+				<input id="a61" type="checkbox" name="q6" checked>
+				<label for="a61">CGI</label>
+				<input id="a62" type="checkbox" name="q6">
+				<label for="a62">FastCGI</label>
+				<input id="a63" type="checkbox" name="q6">
+				<label for="a63">WSGI</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<p>7. Какой из перечисленных веб-серверов является наиболее популярным среди сайтов миллионников за 2020 год?</p>
+			<div>
+				<input id="a71" type="checkbox" name="q7">
+				<label for="a71">Apache</label>
+				<input id="a72" type="checkbox" name="q7" checked>
+				<label for="a72">Nginx</label>
+				<input id="a73" type="checkbox" name="q7">
+				<label for="a73">Microsoft-IIS</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<p>8. Из каких частей состоит архитектура веб-сервера Apache?</p>
+			<div>
+				<input id="a81" type="checkbox" name="q8" checked>
+				<label for="a81">Модульная система</label>
+				<input id="a82" type="checkbox" name="q8" checked>
+				<label for="a82">Ядро</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<p>9. Какие компоненты входят в архитектуру веб-сервера Nginx?</p>
+			<div>
+				<input id="a91" type="checkbox" name="q9" checked>
+				<label for="a91">мастер-процесс</label>
+				<input id="a92" type="checkbox" name="q9">
+				<label for="a92">модульная система</label>
+				<input id="a93" type="checkbox" name="q9">
+				<label for="a93">загрузчик кэша</label>
+				<input id="a94" type="checkbox" name="q9">
+				<label for="a94">кэш менеджер</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<p>10. С помощью какой директивы можно задать порт на виртуальном хосте в конфигурационном файле?</p>
+			<div>
+				<input id="a101" type="checkbox" name="q10">
+				<label for="a101">server</label>
+				<input id="a102" type="checkbox" name="q10" checked>
+				<label for="a102">listen</label>
+				<input id="a103" type="checkbox" name="q10">
+				<label for="a103">server_listen</label>
+				<input id="a104" type="checkbox" name="q10">
+				<label for="a104">server_name</label>
+			</div>
+		</fieldset>
+	</form>
+    </div>
+    <!-- КОНЕЦ ВАШЕГО КОНТЕНТА -->
+</body>
+</html>
