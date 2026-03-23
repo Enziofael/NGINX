@@ -28,7 +28,7 @@
             { name: 'Lab2', url: 'lab2.html' },
             { name: 'Lab3', url: 'lab3.html' },
             { name: 'Lab4', url: 'lab4.html' },
-            { name: 'Lab5', url: 'lab5.html' },
+            { name: 'Lab5', url: 'lab5.php' },
             { name: 'Lab6', url: 'lab6.html' },
             { name: 'Lab7', url: 'lab7.html' },
             { name: 'Lab8', url: 'lab8.html' },
@@ -70,5 +70,14 @@
         
         console.log('Navigation and wrapper inserted successfully');
         console.log('Final structure:', document.body.innerHTML);
+
+        // Добавляем обработчик клика на nav-container для перехода на /
+        navContainer.style.cursor = 'pointer';
+        navContainer.addEventListener('click', function(e) {
+            // Проверяем, что клик был не по внутренним ссылкам
+            if (!e.target.closest('a')) {
+                window.location.href = '/';
+            }
+        });
     });
 })();

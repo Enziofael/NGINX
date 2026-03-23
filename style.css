@@ -74,7 +74,6 @@ body {
     font-weight: 500;
     transition: var(--transition);
     border: 1px solid transparent;
-
 }
 
 .nav-link h1 {
