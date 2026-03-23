@@ -452,3 +452,21 @@ body {
         font-size: 0.95rem;
     }
 }
+
+input[type="text"] {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 6px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    vertical-align: middle;
+}

@@ -1,5 +1,8 @@
 <?php
-$content = '<h1 style="text-align: center;">Привет :P</h1><p style="text-align: center;">Я пыха</p>';
+//task1
+
+$content = '
+';
 ?>
 
 <!DOCTYPE html>
