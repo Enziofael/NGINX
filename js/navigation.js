@@ -20,7 +20,7 @@
         navContainer.className = 'nav-container';
         
         // Определяем текущую страницу
-        const currentPage = window.location.pathname.split('/').pop() || 'lab1.html';
+        const currentPage = window.location.pathname.split('/').pop() || 'lab0.html';
         
         // Массив с ссылками
         const labs = [
@@ -31,7 +31,13 @@
             { name: 'Lab5', url: 'lab5.html' },
             { name: 'Lab6', url: 'lab6.html' },
             { name: 'Lab7', url: 'lab7.html' },
-            { name: 'Lab8', url: 'lab8.html' }
+            { name: 'Lab8', url: 'lab8.html' },
+            { name: 'Lab9', url: 'lab9.html' },
+            { name: 'Lab10', url: 'lab10.html' },
+            { name: 'Lab11', url: 'lab11.html' },
+            { name: 'Lab12', url: 'lab12.html' },
+            { name: 'Lab13', url: 'lab13.html' },
+            { name: 'Lab14', url: 'lab14.html' }
         ];
         
         // Формируем навигацию
