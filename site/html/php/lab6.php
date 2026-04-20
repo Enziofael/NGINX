@@ -80,36 +80,81 @@
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 5
+                echo "<h1>5. Вычисление периметра прямоугольника</h1>";
+
+                $a = 6;
+                $b = 8;
+                $p = 2 * ($a + $b);
+                echo "<p>Периметр прямоугольника со сторонами $a и $b равен $p</p>";
             ?>
         </div>
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 6
+                echo "<h1>6. Курсив</h1>";
+
+                echo "<p>" . "<i>Этот текст написан курсивом с помощью тега i.</i><br>" . "</p>";
+
             ?>
         </div>
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 7
+                echo "<h1>7. Цикл <code>for</code> и <code>&ltbr&gt</code></h1>";
+
+                echo "<h2>" . "Числа от 1 до 9:" . "</h2>";
+                for ($i = 1; $i <= 9; $i++) {
+                    echo $i . "<br>";
+                }
+                echo "</p>";
             ?>
         </div>
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 8
+                echo "<h1>8. Последний символ строки</h1>";
+
+                $string = "Hello, world!";
+                $lastChar = $string[strlen($string) - 1];
+                echo "<p>" . "Последний символ строки '$string' — '$lastChar'" . "</p>";
             ?>
         </div>
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 9
+                echo "<h1>9. Сокращенные операции</h1>";
+                
+                $num = 47;
+                $num += 7;
+                $num -= 18;
+                $num *= 10;
+                $num /= 15;
+                echo "<p>Результат сокращённых операций: $num</p>";
+
+
             ?>
         </div>
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 10
+                echo "<h1>10. Вычиcление секунд в сутках</h1>";
+
+                $secondsInDay = 24 * 60 * 60;
+                echo "<p>В сутках $secondsInDay секунд.</p>";
+
+                /* или: 
+                $secondsInMinute = 60;
+                $minutesInHour = 60;
+                $hoursInDay = 24;
+                
+                $secondsInDay = $hoursInDay * $minutesInHour * $secondsInMinute;
+                echo "<p>В сутках $secondsInDay секунд.</p>";
+                */
             ?>
         </div>
             <?php
@@ -122,36 +167,18 @@
 
 
         // Задание 5: Периметр прямоугольника
-        $a_rect = 6;
-        $b_rect = 8;
-        $p = 2 * ($a_rect + $b_rect);
-        echo "<p>Периметр прямоугольника со сторонами $a_rect и $b_rect равен $p</p>";
+
 
         // Задание 6: Курсивный текст
-        echo "<i>Этот текст написан курсивом с помощью тега i.</i><br>";
 
         // Задание 7: Столбец чисел от 1 до 9
-        echo "Числа от 1 до 9:<br>";
-        for ($i = 1; $i <= 9; $i++) {
-            echo $i . "<br>";
-        }
+
 
         // Задание 8: Последний символ строки
-        $string = "Hello, world!";
-        $lastChar = $string[strlen($string) - 1];
-        echo "<p>Последний символ строки '$string' — '$lastChar'</p>";
 
-        // Задание 9: Сокращённые операции
-        $num = 47;
-        $num += 7;
-        $num -= 18;
-        $num *= 10;
-        $num /= 15;
-        echo "<p>Результат сокращённых операций: $num</p>";
 
         // Задание 10: Количество секунд в сутках
-        $secondsInDay = 24 * 60 * 60;
-        echo "<p>В сутках $secondsInDay секунд.</p>";
+
         ?>
     </div>
     <!-- КОНЕЦ КОНТЕНТА -->
