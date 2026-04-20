@@ -11,6 +11,7 @@
     <script src="js/navigation.js"></script>
     <div class="my-content">
 
+
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 1
@@ -30,6 +31,7 @@
             ?>
         </div>
 
+
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 2    
@@ -39,6 +41,7 @@
                 echo "<h2>$surname</h2>"; //заменил на h2 т.к. h1 использую для нумерации
             ?>
         </div>
+
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
@@ -66,6 +69,7 @@
             ?>
         </div>
 
+
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 4
@@ -76,6 +80,7 @@
                 echo "<p>Площадь квадрата со стороной $a равна $s</p>";
             ?>
         </div>
+
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
@@ -89,6 +94,7 @@
             ?>
         </div>
 
+
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 6
@@ -98,6 +104,7 @@
 
             ?>
         </div>
+
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
@@ -112,6 +119,7 @@
             ?>
         </div>
 
+
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
                 // Задание 8
@@ -122,6 +130,7 @@
                 echo "<p>" . "Последний символ строки '$string' — '$lastChar'" . "</p>";
             ?>
         </div>
+
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
@@ -138,6 +147,7 @@
 
             ?>
         </div>
+
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
@@ -157,30 +167,8 @@
                 */
             ?>
         </div>
-            <?php
-
-
-
 
         
-
-
-
-        // Задание 5: Периметр прямоугольника
-
-
-        // Задание 6: Курсивный текст
-
-        // Задание 7: Столбец чисел от 1 до 9
-
-
-        // Задание 8: Последний символ строки
-
-
-        // Задание 10: Количество секунд в сутках
-
-        ?>
     </div>
-    <!-- КОНЕЦ КОНТЕНТА -->
 </body>
 </html>
