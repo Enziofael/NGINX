@@ -1,11 +1,30 @@
+
 services:
-  web:
-    build: . # Собрать образ из Dockerfile в текущей папке
-    container_name: nginx-server
+  nginx:
+    build: .
+    container_name: my-local-nginx
     ports:
-      - "8080:80" # Пробросить порт 8080 на вашем компьютере на порт 80 контейнера
+      - "80:80"      # HTTP
+      - "443:443"    # HTTPS
+      - "8084:8084"  # Второй HTTP сервер
+      - "8081:8081"  # PHP сервер
     volumes:
-      # Режим разработки: изменения в папке 'site' будут сразу видны в браузере
-      - ./drug.ru:/var/www/drug.ru/
-      # Изменения в конфиге потребуют перезапуска контейнера
-      - ./nginx-config/drug.ru:/etc/nginx/sites-avaible/drug.ru
+      # Монтирование для разработки
+      - ./site:/var/www/drug.ru
+      - ./nginx-config/drug.ru.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php-fpm
+    networks:
+      - web-network
+
+  php-fpm:
+    image: php:8.2-fpm
+    container_name: my-local-php
+    volumes:
+      - ./site:/var/www/drug.ru
+    networks:
+      - web-network
+
+networks:
+  web-network:
+    driver: bridge
