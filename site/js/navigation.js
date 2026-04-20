@@ -4,7 +4,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         console.log('DOM fully loaded');
         
-        // Теперь ищем my-content
+        // ищем my-content
         const originalMyContent = document.querySelector('.my-content');
         
         if (!originalMyContent) {
@@ -29,7 +29,7 @@
             { name: 'Lab3', url: 'lab3.html' },
             { name: 'Lab4', url: 'lab4.html' },
             { name: 'Lab5', url: 'lab5.php' },
-            { name: 'Lab6', url: 'lab6.html' },
+            { name: 'Lab6', url: 'lab6.php' },
             { name: 'Lab7', url: 'lab7.html' },
             { name: 'Lab8', url: 'lab8.html' },
             { name: 'Lab9', url: 'lab9.html' },
