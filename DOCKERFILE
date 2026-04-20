@@ -1,0 +1,7 @@
+FROM nginx:latest
+
+COPY --chown=root:root ./nginx-config/drug.ru /etc/nginx/sites-avaible/drug.ru
+
+COPY ./drug.ru/ /var/www/drug.ru/
+
+EXPOSE 80

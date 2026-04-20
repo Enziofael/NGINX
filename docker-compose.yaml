@@ -1,0 +1,11 @@
+services:
+  web:
+    build: . # Собрать образ из Dockerfile в текущей папке
+    container_name: nginx-server
+    ports:
+      - "8080:80" # Пробросить порт 8080 на вашем компьютере на порт 80 контейнера
+    volumes:
+      # Режим разработки: изменения в папке 'site' будут сразу видны в браузере
+      - ./drug.ru:/var/www/drug.ru/
+      # Изменения в конфиге потребуют перезапуска контейнера
+      - ./nginx-config/drug.ru:/etc/nginx/sites-avaible/drug.ru
