@@ -51,10 +51,11 @@
                 echo "<p><b>Рабочая директория хоста:</b> <code>" . "NGINX/site/html/php/lab11_workdir" . "</code></p>";
             ?>
         </div>
+
+        <!-- Часть 1 -->
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
-                // ---------- Часть 1 ----------
-                echo "<h2>Часть 1. Файлы</h2>";
+                echo "<h1>Часть 1. Файлы</h1>";
 
                 // 1. Создать test.txt и записать 'Привет, мир!'
                 $filename = 'test.txt';
@@ -100,10 +101,12 @@
                 echo "<p>8. world.txt $worldExists, mir.txt $mirExists</p>";
             ?>
         </div>
+
+
+        <!-- Часть 2 -->
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
-                // ---------- Часть 2 ----------
-                echo "<h2>Часть 2. Папки и файлы</h2>";
+                echo "<h1>Часть 2. Папки и файлы</h1>";
 
                 // 1. Создать папку test
                 $testDir = 'test';
@@ -144,6 +147,7 @@
             ?>
         </div>
         
+        <!-- Кнопка чистки папки -->
         <form method="post" class="temp">
                 <input type="hidden" name="cleanup" value="1">
                 <button type="submit" class="nav-link" style="background-color: #220000; width: 20rem; height: 2.5rem;">Удалить рабочую папку</button>

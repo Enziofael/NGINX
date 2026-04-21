@@ -23,8 +23,8 @@
         <!-- Часть 1. Обработка исключений -->
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
-                echo '<h2>Часть 1. Обработка исключений</h2>';
-    
+                echo '<h1>Часть 1. Обработка исключений</h1>';
+
                 // 1. Обработчик для ошибки открытия несуществующего файла
                 echo '<p><b>1.</b> Попытка открыть несуществующий файл:<br>';
                 try {
@@ -37,7 +37,7 @@
                     echo 'Ошибка: ' . $ex->getMessage();
                 }
                 echo '</p>';
-    
+
                 // 2. Обработчик исключения для деления на ноль + запись в log.txt
                 echo '<p><b>2.</b> Деление на ноль и запись в log.txt:<br>';
                 try {
@@ -53,7 +53,7 @@
                     echo 'Произошла ошибка, запись добавлена в log.txt';
                 }
                 echo '</p>';
-    
+
                 // 3. Обработчик исключения для доступа к несуществующему элементу массива
                 echo '<p><b>3.</b> Доступ к несуществующему ключу массива:<br>';
                 $countries = ['Spain' => 'Madrid', 'Russia' => 'Moscow'];
@@ -73,7 +73,7 @@
         <!-- Часть 2. Работа с датами -->
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
-                echo '<h2>Часть 2. Работа с датами</h2>';
+                echo '<h1>Часть 2. Работа с датами</h1>';
 
                 // 1. 15 марта 2025, 10:25:00 в timestamp
                 $ts1 = mktime(10, 25, 0, 3, 15, 2025);
