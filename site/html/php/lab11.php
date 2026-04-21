@@ -33,7 +33,7 @@
                     // Выводим сообщение и кнопку возврата
                     echo '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Очистка</title></head><body style="text-align: center; line-height: 2.5rem;">';
                     echo $message;
-                    echo '<p><a href="lab11.php" class="nav-link">← Вернуться к заданию</a></p>';
+                    echo '<p><a href="lab11.php" class="nav-link">Вернуться к заданию</a></p>';
                     echo '</body></html>';
                     exit;
                 }
@@ -148,7 +148,7 @@
         </div>
         
         <!-- Кнопка чистки папки -->
-        <form method="post" class="temp">
+        <form method="post" style="display: flex; flex-direction: column; align-items: center;">
                 <input type="hidden" name="cleanup" value="1">
                 <button type="submit" class="nav-link" style="background-color: #220000; width: 20rem; height: 2.5rem;">Удалить рабочую папку</button>
         </form>

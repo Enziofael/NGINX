@@ -429,9 +429,7 @@ code {
 }
 
 .temp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
 }
 
 /* Адаптивность для мобильных */

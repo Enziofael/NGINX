@@ -10,7 +10,37 @@
     <script src="/js/navigation.js"></script>
 
     <div class="my-content">
+        <?php
+            // --- Обработка очистки созданных файлов ---
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cleanup'])) {
+                $filesToDelete = [
+                    __DIR__ . '/log.txt',
+                ];
 
+                $deleted = [];
+                $notFound = [];
+                foreach ($filesToDelete as $file) {
+                    if (file_exists($file)) {
+                        unlink($file);
+                        $deleted[] = basename($file);
+                    } else {
+                        $notFound[] = basename($file);
+                    }
+                }
+
+                // Вывод результата и ссылка назад
+                echo '<!DOCTYPE html><html><head></head><body style="text-align: center; line-height: 2.5rem;">';
+                if (!empty($deleted)) {
+                    echo '<p style="color: green;">✅ Удалены файлы: ' . implode(', ', $deleted) . '</p>';
+                }
+                if (!empty($notFound)) {
+                    echo '<p style="color: gray;">⚠️ Файлы не найдены: ' . implode(', ', $notFound) . '</p>';
+                }
+                echo '<p><a href="lab12.php" class="nav-link">Вернуться к лабораторной работе</a></p>';
+                echo '</body></html>';
+                exit;
+            }
+        ?>
 
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
@@ -137,6 +167,10 @@
                 echo "<p><b>10.</b> До Нового Года осталось примерно $daysLeft дней.</p>";
             ?>
         </div>
+        <form method="post" style="display: flex; flex-direction: column; align-items: center;">
+            <input type="hidden" name="cleanup" value="1">
+            <button type="submit" class="nav-link" style="background-color: #220000; width: 20rem; height: 2.5rem;">Очистить созданные файлы</button>
+        </form>
     </div>
 </body>
 </html>
