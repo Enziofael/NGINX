@@ -31,7 +31,7 @@
             { name: 'Lab5', url: 'lab5.php' },
             { name: 'Lab6', url: 'lab6.php' },
             { name: 'Lab7', url: 'lab7.php' },
-            { name: 'Lab8', url: 'lab8.html' },
+            { name: 'Lab8', url: 'lab8.php' },
             { name: 'Lab9', url: 'lab9.html' },
             { name: 'Lab10', url: 'lab10.html' },
             { name: 'Lab11', url: 'lab11.html' },
