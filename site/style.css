@@ -51,6 +51,14 @@ body {
     flex-wrap: wrap;
 }
 
+code {
+    border: solid 1px #000000A0;
+    background-color: #000000A0;
+    border-radius: 10px;
+    padding: 0.3rem;
+    margin: 0 0.3rem;
+}
+
 .nav-container:hover {
     border-color: var(--accent-cyan);
     box-shadow: var(--glow-cyan);
@@ -418,6 +426,12 @@ body {
 
 .content-wrapper fieldset:last-child p::before {
     color: var(--accent-green);
+}
+
+.temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Адаптивность для мобильных */
