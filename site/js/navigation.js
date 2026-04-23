@@ -36,10 +36,10 @@
             { name: 'Lab10', url: 'lab10.html' },
             { name: 'Lab11', url: 'lab11.php' },
             { name: 'Lab12', url: 'lab12.php' },
-            { name: 'Lab13', url: 'lab13.html' },
-            { name: 'Lab14', url: 'lab14.html' },
-            { name: 'Lab15', url: 'lab15.html' },
-            { name: 'Lab16', url: 'lab16.html' }
+            { name: 'Lab13', url: 'lab13.php' },
+            { name: 'Lab14', url: 'lab14.php' },
+            { name: 'Lab15', url: 'lab15.php' },
+            { name: 'Lab16', url: 'lab16' }
         ];
         
         // Формируем навигацию

@@ -4,12 +4,12 @@ services:
     build: .
     container_name: my-local-nginx
     ports:
-      - "80:80"      # HTTP
-      - "443:443"    # HTTPS
-      - "8084:8084"  # Второй HTTP сервер
-      - "8081:8081"  # PHP сервер
+      - "80:80"      # HTTP (вирт. хост 1)
+      - "443:443"    # HTTPS (вирт. хост 1)
+      - "8084:8084"  # Второй HTTP сервер (вирт. хост 2)
+      - "8081:8081"  # PHP сервер (вирт. хост 3)
     volumes:
-      # Монтирование для разработки
+      # Монтирование
       - ./site:/var/www/drug.ru
       - ./nginx-config/drug.ru.conf:/etc/nginx/conf.d/default.conf
     depends_on:
