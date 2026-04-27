@@ -45,7 +45,7 @@
         <div class="fieldset-card" style="justify-content: space-around; display: flex; flex-direction: column;">
             <?php
             echo "<h1>Другашев</h1>";
-            echo "<p><b>Путь к <code>log.txt</code> в контейнере:</b> <code>" . realpath("log.txt") . "</code></p>";
+            echo "<p><b>Путь к <code>log.txt</code> в контейнере:</b> <code>" . realpath("./log.txt") . "</code></p>";
             echo "<p><b>Путь к <code>log.txt</code> в хосте:</b> <code>NGINX/site/html/php/log.txt</code></p>";
             ?>
         </div>
