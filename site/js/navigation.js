@@ -39,7 +39,7 @@
             { name: 'Lab13', url: 'lab13.php' },
             { name: 'Lab14', url: 'lab14.php' },
             { name: 'Lab15', url: 'lab15.php' },
-            { name: 'Lab16', url: 'lab16' }
+            { name: 'Lab16', url: 'lab16.html' }
         ];
         
         // Формируем навигацию
